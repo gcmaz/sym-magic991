@@ -1,0 +1,65 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    On Air Talent and Programming - Magic 99.1 - Adult Contemporary Radio
+{% endblock %}
+    
+{% block description %}
+    <meta name="description" content="On Air Talent and Programming - Magic 99.1 - Adult Contemporary Radio"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/logo-magic.png') }}"/>
+    <meta property="og:url" content="http://magic.gcmaz.com{{ path('Magic991_onair') }}"/>
+    <meta property="og:title" content="On Air Talent and Programming - Magic 99.1 - Adult Contemporary Radio"/> 
+    <meta property="og:description" content="On Air Talent and Programming - Magic 99.1 - Adult Contemporary Radio"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="on air, radio, talent, programming, Prescott, Prescott Valley"/>
+{% endblock %}
+
+{% block leftcol_fb %}{% endblock %}
+    
+{% block leftcol_ad %}
+    <a href="http://prescott.maaco.com/" target="_blank">
+        <img src="{{asset('images/300x250/maaco.jpg')}}" width="300" height="250" alt="Maaco Auto Body" border="0" />
+    </a>
+{% endblock %}
+    
+{% block content %}
+    <div class="onair centered">
+            <div class="info-left">
+                    <img src="{{ asset('images/leza150x150.jpg') }}" alt="Leza" width="150" height="150" border="0" usemap="#leza" />
+            </div>
+            <div class="info-right">
+            	<p>Leza <span style="color:#13a0e5;">| Mornings 6a - 10a</span></p>
+	<p>No stranger to the Prescott area or the  Prescott airwaves, Leza is making the Magic happen in the mornings on Magic  99.1. Leza, who is also a mom of two teenage daughters, a wife for over 20  years (to the same man) and a small business owner says her radio gig “is the most  fun I’ve ever had... at work!” Be sure to wake up with Leza Live from 6 to 10am  Monday through Friday from downtown Prescott.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <div class="info-left">
+                    <img src="{{ asset('images/jay150x150.jpg') }}" alt="Charlie" width="150" height="150" border="0" usemap="#jay" />
+            </div>
+            <div class="info-right">
+            	<p>Jay <span style="color:#13a0e5;">| Afternoons 2p - 7p</span></p>
+                <p>Second to radio (of course), Jay is a self-professed TV junky and loves to share how much he knows about the latest gossip on TV shows, Hollywood, and Movies…in between all the great music of course. When Jay’s not on the radio and not watching TV, he’s surfin' the web to find the best viral videos for you to watch. Be sure to follow Jay on <a href="http://www.facebook.com/JayAllenOnAir" target="_blank">Facebook</a> and <a href="http://www.twitter.com/Jay_Allen_" target="_blank">Twitter</a> to get the latest videos.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <br class="clear"/>
+            <div class="fb-like" data-href="http://magic.gcmaz.com{{ path('Magic991_onair') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+            <br class="clear"/><br/>
+        </div>
+    </div>
+    <br/>
+<map name="leza" id="leza">
+  <area shape="rect" coords="112,114,145,146" href="https://twitter.com/Leza_Live" target="_blank" alt="Leza's Twitter" />
+  <area shape="rect" coords="73,113,106,145" href="https://www.facebook.com/LezaLiveandLocal" target="_blank" alt="Leza's Facebook" />
+</map>
+<map name="jay" id="jay">
+  <area shape="rect" coords="112,114,145,146" href="https://twitter.com/Jay_Allen_" target="_blank" alt="Jay's Twitter" />
+  <area shape="rect" coords="73,113,106,145" href="https://www.facebook.com/JayAllenOnAir" target="_blank" alt="Jay's Facebook" />
+</map>
+{% endblock %}

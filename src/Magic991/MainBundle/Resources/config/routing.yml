@@ -1,0 +1,99 @@
+Magic991_homepage:
+    pattern:  /
+    defaults: { _controller: Magic991MainBundle:Page:index }
+    methods: [GET|POST]
+    
+Magic991_contact:
+    path: /contact/prescott/radio/99-1
+    defaults: { _controller: Magic991MainBundle:Page:contact }
+    methods: [GET|POST]
+
+Magic991_contact2:
+    path: /contact
+    defaults: { _controller: Magic991MainBundle:Page:contact }
+    methods: [GET|POST]
+    
+Magic991_onair:
+    path: /on-air/radio/talent/programming
+    defaults: { _controller: Magic991MainBundle:Page:onair }
+    methods: GET
+
+Magic991_photos:
+    path: /photos/prescott
+    defaults: { _controller: Magic991MainBundle:Page:photos }
+    methods: [GET|POST]
+    
+Magic991_songrequest:
+    path: /radio/songs/requests
+    defaults: { _controller: Magic991MainBundle:Page:songrequest }
+    methods: [GET|POST]
+    
+Magic991_concerts:
+    path: /concerts/prescott/arizona
+    defaults: { _controller: Magic991MainBundle:Page:concerts }
+    methods: GET
+  
+Magic991_concerts2:
+    path: /concerts
+    defaults: { _controller: Magic991MainBundle:Page:concerts }
+    methods: GET
+
+Magic991_community:
+    path: /prescott/community/info
+    defaults: { _controller: Magic991MainBundle:Page:community }
+    methods: GET
+    
+Magic991_whats:
+    path: /prescott/events
+    defaults: { _controller: Magic991MainBundle:Page:whats }
+    methods: GET
+    
+Magic991_advertise:
+    path: /radio/prescott/advertise
+    defaults: { _controller: Magic991MainBundle:Advertise:enter }
+    methods: [GET|POST]
+
+Magic991_advertise_show:
+    path: /radio/prescott/advertise/{show}
+    defaults: { _controller: Magic991MainBundle:Advertise:show, show: 'none'  }
+    methods: [GET]
+    
+Magic991_news:
+    path: /prescott/news/weather
+    defaults: { _controller: Magic991MainBundle:Page:news }
+    methods: [GET|POST]
+
+Magic991_contest:
+    path: /contest/{contest}
+    defaults: { _controller: Magic991MainBundle:Contest:contest,  contest: 'default' }
+    methods: [GET|POST]
+  
+Magic991_splash:
+    path: /info/{splash}
+    defaults: { _controller: Magic991MainBundle:Splash:splash, splash: 'default' }
+    methods: [GET|POST]
+
+Magic991_pet:
+    path: /prescott/pet-of-the-week
+    defaults: { _controller: Magic991MainBundle:Page:Pet }
+    methods: [GET]
+    
+Magic991_yrmc:
+    path: /prescott/healthy-living
+    defaults: { _controller: Magic991MainBundle:Yrmc:Show }
+    methods: [GET]
+    
+Magic991_yrmc_edit:
+    path: /yrmc/
+    defaults: { _controller: Magic991MainBundle:Yrmc:Edit }
+    methods: [GET|POST]
+    
+Magic991_jobs:
+    path: /jobs
+    defaults: { _controller: Magic991MainBundle:Page:jobs }
+    methods: GET
+  
+Magic991_test:
+    path: /test
+    defaults: { _controller: Magic991MainBundle:Page:test }
+    methods: [GET|POST]

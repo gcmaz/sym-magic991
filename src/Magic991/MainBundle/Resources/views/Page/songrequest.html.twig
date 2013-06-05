@@ -1,0 +1,85 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Song Requests - Magic 99.1 - Contemporary Adult Radio - Prescott - Prescott Valley - Cottonwood - Camp Verde
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Song Requests - Magic 99.1 - Contemporary Adult Radio - Prescott - Prescott Valley - Cottonwood - Camp Verde"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="website" />   
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/logo-magic.png') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_songrequest') }}"/>
+    <meta property="og:title" content="Song Requests - Magic 99.1 - Contemporary Adult Radio - Prescott - Prescott Valley - Cottonwood - Camp Verde"/> 
+    <meta property="og:description" content="Song Requests - Magic 99.1 - Contemporary Adult Radio - Prescott - Prescott Valley - Cottonwood - Camp Verde"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="song requests, radio, prescott, prescott valley, camp verde, cottonwood"/>
+{% endblock %}
+
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        form.requestsform { font-size: 16px;color:#ffffff; }
+        form.requestsform div { clear: left; margin-bottom: 10px; }
+        form.requestsform label { float: left; margin-right: 10px; text-align: right; width: 150px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+        form.requestsform input[type="text"],
+        form.requestsform input[type="email"]
+            { width: 400px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.requestsform select { width:400px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.requestsform textarea { width: 400px; height: 100px; line-height: 26px; font-size: 20px; }
+        form.requestsform input[type="submit"] { margin-left: 160px; width: 408px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.requestsform ul li { color: #ffcc00; margin-bottom: 5px; }
+   </style>
+{% endblock %}
+    
+{% block content %}
+   <h2 class="bangers">Song Requests</h2>
+    {% for flashMessage in app.session.flashbag.get('songnotice') %}
+        <div class="notice">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+   
+    <div style="width:90%;text-align:left;">
+        <form action="{{ path('Magic991_songrequest') }}" method="post" {{ form_enctype(form) }} class="requestsform">
+            {{ form_errors(form) }}
+
+            {{ form_row(form.name) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.city) }}
+            <div>
+            {{ form_label(form.songrequest, 'Song Request') }}
+            {{ form_errors(form.songrequest) }}            
+            {{ form_widget(form.songrequest) }}
+            </div>
+
+            {{ form_rest(form) }}
+
+            <input type="submit" value="Submit" />
+        </form>
+        <br/><br/>
+       <div style="float:left;">
+           <!--sponsor-->
+        </div>
+        <div style="color:#13a0e5;float:right;font-size:12px;font-weight:bold;text-align:left;margin-right:50px;">
+	<p>Other ways to submit your requests ....</p>
+
+            	<p style="font-size:18px;line-height:1.4;border-bottom:1px solid #999;">
+                    Fax <span style="color:#fff;">928-445-6852</span>
+            	</p>
+            	<p style="font-size:18px;line-height:1.4;border-bottom:1px solid #999;">
+                    Post On <a href="https://www.facebook.com/pages/Magic-991/175911715829200" target="_blank"><img src="{{ asset('images/facebook.png') }}" width="104" height="29" alt="Facebook" style="margin:0;"/></a>
+            	</p>
+	<p style="font-size:18px;line-height:1.4;border-bottom:1px solid #999;">
+                    Mail <span style="font-size:11px;">116 S. Alto, Prescott, AZ 86301</span>
+                </p>                
+         </div>
+        <br class="clear"/>
+        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_songrequest') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+        <br class="clear"/><br/>
+    </div>
+{% endblock %}
