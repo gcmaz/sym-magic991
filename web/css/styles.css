@@ -151,6 +151,12 @@ div.notice {
     font-family: 'Bangers', cursive;
     letter-spacing: 2px;
 }
+.blue{
+    color:#0f2359;
+}
+.pink{
+    color:#cc66cc;
+}
 .logo_box{}
 .sponsor_box{
     margin: -10px auto 10px;
