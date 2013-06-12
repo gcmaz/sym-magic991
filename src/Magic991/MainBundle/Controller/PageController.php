@@ -120,5 +120,10 @@ class PageController extends Controller
     {
         return $this->render('Magic991MainBundle:Page:jobs.html.twig');
     }
+    
+    public function weatherAction()
+    {
+        return $this->render('Magic991MainBundle:Page:weather.html.twig');
+    }
 }
 ?>

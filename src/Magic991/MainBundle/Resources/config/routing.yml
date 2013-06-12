@@ -92,6 +92,11 @@ Magic991_jobs:
     path: /jobs
     defaults: { _controller: Magic991MainBundle:Page:jobs }
     methods: GET
+    
+Magic991_weather:
+    path: /weather
+    defaults: { _controller: Magic991MainBundle:Page:weather }
+    methods: GET
   
 Magic991_test:
     path: /test
