@@ -9,18 +9,19 @@ class ContestController extends Controller
 {
     public function contestAction($contest)
     {
-        // DEFAULT
-        if($contest == 'default'){
-            // could display list of contests here
-            return $this->render('Magic991MainBundle:Page:contest.html.twig', array(
-                'contest' => $contest
-            ));
+        switch($contest){
+            case 'default' :
+                // could display list of contests here
+                return $this->render('Magic991MainBundle:Page:contest.html.twig', array(
+                    'contest' => $contest
+                ));
             
-        // MAGIC MASHUP
-        } else if ($contest == 'magic-mashup'){
-            return $this->render('Magic991MainBundle:Contest:magicmashup.html.twig', array(
-                'contest' => $contest
-            ));
+            // MAGIC MASHUP
+            case 'magic-mashup' :
+                return $this->render('Magic991MainBundle:Contest:magicmashup.html.twig', array(
+                    'contest' => $contest
+                ));
+                
         }
     }
 }
