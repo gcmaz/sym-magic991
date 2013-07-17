@@ -1,0 +1,10 @@
+magic991_main:
+    resource: "@Magic991MainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern: /login
+    defaults: { _controller: Magic991SecurityBundle:Security:login }
+    
+login_check:
+    pattern: /login_check

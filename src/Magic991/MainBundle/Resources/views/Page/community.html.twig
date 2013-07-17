@@ -1,0 +1,32 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Community Information - Prescott - Prescott Valley - Northern Arizona
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Community Information - Prescott - Northern Arizona"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />   
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/logo-magic.png') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_community') }}"/>
+    <meta property="og:title" content="Community Information - Prescott - Prescott Valley - Northern Arizona"/> 
+    <meta property="og:description" content="Community Information - Prescott - Prescott Valley - Northern Arizona"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Community, Prescott, Prescott Valley, Northern Arizona"/>
+{% endblock %}
+    
+{% block leftcol_ad %}
+    <a href="{{path('Magic991_yrmc')}}"><img src="{{asset('images/300x250/healthyliving.jpg')}}" width="300" height="250" alt="Healthy Living with Roxanne Hull - Yavapai Regional Medical Center"></a>
+{% endblock %}
+    
+{% block content %}
+    <h2 class="bangers">Northern Arizona Community</h2>
+    <iframe src="http://www.magic991.com/community_pres2.php" width="660" height="1500"></iframe>
+    <br/>
+    <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_community') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+{% endblock %}

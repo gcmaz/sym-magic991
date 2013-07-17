@@ -1,0 +1,70 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Contact Magic 99.1 - Prescott Radio - Hot Adult Contemporary
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Contact Magic 99.1 - Prescott Radio - Hot Adult Contemporary"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Prescott Radio, Prescott, radio, hot ac, 90's"/>
+{% endblock %}
+
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        form.contactform { font-size: 16px;color:#fff; }
+        form.contactform div { clear: left; margin-bottom: 10px; }
+        form.contactform label { float: left; margin-right: 10px; text-align: right; width: 150px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+        form.contactform input[type="text"],
+        form.contactform input[type="email"]
+            { width: 400px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.contactform select { width:400px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.contactform textarea { width: 400px; height: 150px; line-height: 26px; font-size: 20px; }
+        form.contactform input[type="submit"] { margin-left: 160px; width: 408px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.contactform ul li { color: #fff000; margin-bottom: 5px; }
+    </style>
+{% endblock %}
+    
+{% block leftcol_fb %}{% endblock %}
+    
+{% block content %}
+    <div style="width:290px;float:left;margin:10px 10px 20px 20px;padding:5px 0;color:#fff;line-height:1.4;font-weight:600;background-color: rgba(19,160,229,.1);border:1px solid #13a0e5;" class="textshadow">
+        <h1 class="bangers">PRESCOTT OFFICE:</h1>
+        116 S. Alto<br />
+        Prescott, AZ 86301<br />
+        Office: 928-445-6880<br />
+        Fax: 928-445-6852
+    </div>
+    <div style="width:290px;float:right;margin:10px 20px 20px 10px;padding:5px 0;color:#fff;line-height:1.4;font-weight:600;background-color: rgba(19,160,229,.1);border:1px solid #13a0e5;" class="textshadow">
+        <h1 class="bangers">FLAGSTAFF OFFICE:</h1>
+        1117 W. Route 66<br />
+        Flagstaff, AZ 86001<br />
+        Office: 928-774-5231<br />
+        Fax: 928-779-2988
+    </div>
+    <h2 class="bangers">STUDIO LINE: 928-445-9910</h1>
+    {% for flashMessage in app.session.flashbag.get('contactnotice') %}
+        <div class="notice">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    <div style="width:90%;text-align:left;">
+        <form action="{{ path('Magic991_contact') }}" method="post" {{ form_enctype(form) }} class="contactform">
+            {{ form_errors(form) }}
+
+            {{ form_row(form.name) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.department) }}
+            {{ form_row(form.comments) }}
+                
+            {{ form_rest(form) }}
+
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <p style="width:70%;color:#12a0e7;font-weight:600;margin:40px 0 20px 120px;" class="textshadow">Interested in working for Magic 99.1, <a href="{{path('Magic991_jobs')}}" style="color:#fff;">click here</a> for a list of current job postings.</p>
+    
+{% endblock %}

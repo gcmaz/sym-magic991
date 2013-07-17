@@ -1,0 +1,87 @@
+<?php
+namespace Magic991\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+
+/**
+ * @ORM\Entity
+ */
+class Tinymce
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     *
+     * @ORM\Column(type="text")
+     */
+    protected $textblob;
+    
+    /**
+     *
+     * @ORM\Column(type="datetime")
+     */
+    protected $created;
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Tinymce
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+    
+    /**
+     * Set textblob
+     *
+     * @param string $textblob
+     * @return Tinymce
+     */
+    public function setTextblob($textblob)
+    {
+        $this->textblob = $textblob;
+
+        return $this;
+    }
+
+    /**
+     * Get textblob
+     *
+     * @return string 
+     */
+    public function getTextblob()
+    {
+        return $this->textblob;
+    }
+}
