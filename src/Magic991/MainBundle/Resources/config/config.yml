@@ -1,5 +1,5 @@
 parameters:
-  magic.emails.contact_email: [jeff.basham@kaff.com]
+  magic.emails.contact_email: [jeff.basham@kaff.com,webmaster@magic991.com]
   magic.emails.songrequest_email: [leza@magic991.com]
   magic.emails.advertise_email: [webmaster@magic991.com, jeff.basham@kaff.com, karen.kinney@kaff.com, clay.mccauslin@kaff.com, patrick@magic991.com]
   magic.emails.webmaster_email: webmaster@magic991.com

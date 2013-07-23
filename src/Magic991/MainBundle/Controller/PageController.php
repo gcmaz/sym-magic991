@@ -52,18 +52,25 @@ class PageController extends Controller
              $form->bind($request);
             
             if($form->isValid()){
-                $message = \Swift_Message::newInstance()
-                    ->setSubject('Magic 99.1 | Contact Form')
-                    ->setFrom($contact->getEmail())
-                    ->setReplyTo($contact->getEmail())
-                    ->setTo($this->container->getParameter('magic.emails.contact_email'))
-                    ->setBody($this->renderView('Magic991MainBundle:Email:contact.txt.twig', array('contact' => $contact)));
-                $this->get('mailer')->send($message);
-                
-                $this->get('session')->getFlashBag()->add('contactnotice', 'Successfully sent!');
-                
-                //redirect - important to prevent repost from page refresh
-                return $this->redirect($this->generateUrl('Magic991_contact'));
+                if($contact->getFeedme() === null){
+                    //not spam
+                    $message = \Swift_Message::newInstance()
+                        ->setSubject('Magic 99.1 | Contact Form')
+                        ->setFrom($contact->getEmail())
+                        ->setReplyTo($contact->getEmail())
+                        ->setTo($this->container->getParameter('magic.emails.contact_email'))
+                        ->setBody($this->renderView('Magic991MainBundle:Email:contact.txt.twig', array('contact' => $contact)));
+                    $this->get('mailer')->send($message);
+
+                    $this->get('session')->getFlashBag()->add('contactnotice', 'Successfully sent!');
+
+                    //redirect - important to prevent repost from page refresh
+                    return $this->redirect($this->generateUrl('Magic991_contact'));
+                    
+                } else {
+                    // spam - exit but don't send
+                    return $this->redirect($this->generateUrl('Magic991_contact'));
+                }
             }
         }
         return $this->render('Magic991MainBundle:Page:contact.html.twig', array(
