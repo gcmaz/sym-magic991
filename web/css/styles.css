@@ -187,8 +187,10 @@ div.notice {
     padding:0;
     margin:0 auto 15px;
     width:300px;
+    height:250px;
     overflow:hidden;
     clear:both;
+    text-align:left;
 }
 .box_320x150{
     width:320px;
@@ -278,22 +280,21 @@ ul.dropdown ul li a:hover	{ background-color:#2db4f7;border:1px solid #4cc4ff;}
 	padding:2px 0 2px 5px; /*snap widget iframe has extra padding on the right so we need to offset it */
 	border:1px solid #1e3472;
 }
-#lb2 {
-	width:345px;
-}
+#lb2 { text-align:left;margin-left:20px; }
+#lb2 div.fb-like-box{ background-color:#fff;text-align: left;margin-left:13px;}
 #lb3 {
 	float:right;
 	width:140px;
 	padding:2px 0 2px 5px; /*snap widget iframe has extra padding on the right so we need to offset it */
 	border:1px solid #1e3472;
 }
-#lb1, #lb2, #lb3 {
+#lb1, #lb3 {
 	text-align:center;
 	margin: 0 auto;
 	display:inline;
 	background-color:#0f2359;
 }
-#lb1 p, #lb2 p, #lb3 p{
+#lb1 p, #lb3 p{
 	color:#13a0e5;
 	font-size:10px;
 	font-weight:bold;
