@@ -68,7 +68,7 @@ class PageController extends Controller
                     return $this->redirect($this->generateUrl('Magic991_contact'));
                     
                 } else {
-                    // spam - exit but don't send
+                    // spam - exit but don't send email and don't show managers page
                     return $this->redirect($this->generateUrl('Magic991_contact'));
                 }
             }

@@ -25,6 +25,8 @@
         form.advform textarea { width: 400px; height: 150px; line-height: 26px; font-size: 20px; }
         form.advform input[type="submit"] { margin-left: 160px; width: 408px; line-height: 26px; font-size: 20px; min-height: 26px; }
         form.advform ul li { color: #ff0000; margin-bottom: 5px; }
+        #advcontact_captcha { width:30%;display:inline;vertical-align: top; margin-left:10px;color:#6a7ba7;font-size:0.7em;}
+        a.captcha_reload { color:#6a7ba7;font-size:0.6em;font-weight:600;margin:10px 5px 0;vertical-align: top;display:inline-block;}
         /* adv menu */
         ul.dropdown2 { position:relative; }
         ul.dropdown2 li {
@@ -63,16 +65,25 @@
 {% block js_top %}
     {{ parent() }}
     <script type="text/javascript">
-        /*--- adv dropdown menu  */
-        $(function(){
-            $("ul.dropdown2 li").hover(function(){
-                $(this).addClass("hover");
-                $('ul:first',this).css('visibility', 'visible');
-            }, function(){
-                $(this).removeClass("hover");
-                $('ul:first',this).css('visibility', 'hidden');
+        $(document).ready(function(){
+            /*--- adv dropdown menu  */
+            $(function(){
+                $("ul.dropdown2 li").hover(function(){
+                    $(this).addClass("hover");
+                    $('ul:first',this).css('visibility', 'visible');
+                }, function(){
+                    $(this).removeClass("hover");
+                    $('ul:first',this).css('visibility', 'hidden');
+                });
+                $("ul.dropdown2 li ul li:has(ul)").find("a:first").append(" &raquo; ");
             });
-            $("ul.dropdown2 li ul li:has(ul)").find("a:first").append(" &raquo; ");
+            // change captcha def text
+            $('#advcontact_captcha').val('Enter Captcha Here');
+            $('#advcontact_captcha').focus(function(){
+                if($(this).val()=='Enter Captcha Here'){
+                    $(this).val('');
+                }
+            });
         });
     </script>
 {% endblock %}

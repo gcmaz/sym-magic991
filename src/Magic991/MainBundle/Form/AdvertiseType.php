@@ -13,6 +13,12 @@ class AdvertiseType extends AbstractType
         $builder->add('email', 'email');
         $builder->add('phone');
         $builder->add('comments', 'textarea', array('required' => false));
+        $builder->add('captcha', 'captcha', array(
+            'background_color' => array(9,15,31),
+            'reload' => true,
+            'max_front_lines' => 1,
+            'max_behind_lines' => 1,
+        ));
     }
 
     public function getName()

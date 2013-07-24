@@ -62,8 +62,7 @@
       </td>
       <td>
         <div class="adinfodiv1">
-            <span style="font-weight:bold;">Ted Hixson</span><br />(928) 606-4642<br />
-          <a href="mailto:ted.hixson@kaff.com">ted.hixson@kaff.com</a>
+                &nbsp;
         </div>
       </td>
     </tr>

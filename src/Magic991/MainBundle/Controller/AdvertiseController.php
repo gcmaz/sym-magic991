@@ -24,7 +24,8 @@ class AdvertiseController extends Controller
                         //not spam
                         $message = \Swift_Message::newInstance()
                             ->setSubject('Magic 99.1 | Advertising Form')
-                            ->setFrom('advertise@magic991.com')
+                            ->setFrom($advcontact->getEmail())
+                            ->setReplyTo($advcontact->getEmail())
                             ->setTo($this->container->getParameter('magic.emails.advertise_email'))
                             ->setBody($this->renderView('Magic991MainBundle:Email:advertise.txt.twig', array('advcontact' => $advcontact)));
                         $this->get('mailer')->send($message);

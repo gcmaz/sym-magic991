@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Magic991\MainBundle\Magic991MainBundle(),
             new Magic991\SecurityBundle\Magic991SecurityBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

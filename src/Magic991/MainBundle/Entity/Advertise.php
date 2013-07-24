@@ -45,7 +45,7 @@ class Advertise
 
     public function setFeedme($feedme){
         $this->feedme = $feedme;
-    }  
+    }
     
     public function getEmail(){
         return $this->email;

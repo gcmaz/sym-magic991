@@ -30,3 +30,6 @@ ivory_ck_editor:
             source: [ "Source" ]
             tool1:     [ "Maximize" ]
             tool2:     [ "Save" ]
+            
+gregwar_captcha:
+    as_url: true
