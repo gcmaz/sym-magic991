@@ -74,48 +74,12 @@
         <img src="{{asset('images/uploads/realestate/1855-n-camino-cielo.jpg')}}" width="612" height="407" alt="Prescott Home For Sale" class="centered re-main"/>
         <p style="margin:10px 20px;line-height:1.4;">Endless Opportunities. Property includes 3 parcels, guest cottage, barn and endless views. Split up and develop or keep as a compound. Where else can you find 3.53 acres of contiguous property within the city limts and with horse privledges that is relatively flat? Guest cottage is at 1847 Camino Cielo. Come watch the birds float and soak in the views.</p>
         <br/>
-        {#<div class="centered">
-            <iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1855+N+Camino+Cielo+Prescott,+AZ+86303&amp;aq=&amp;sll=35.181208,-111.607959&amp;sspn=0.235431,0.308647&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=1855+Camino+Cielo,+Prescott,+Yavapai,+Arizona+86305&amp;ll=34.576338,-112.511587&amp;spn=0.024735,0.051498&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-        </div>#}
-        <div id="map-canvas" style="width: 600px; height: 480px;"></div>
+        <div class="centered">
+            {#<iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode="></iframe>#}
+            <iframe src="http://greatcircleradio.com/map.php" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
         <br/>
         <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_realestate') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
         <br class="clear"/><br/>
     </div>
-{% endblock %}
-    
-{% block js_btm %}
-    <script src="http://maps.googleapis.com/maps/api/js?client=963256471474.apps.googleusercontent.com&sensor=false&v=3.12"></script>
-    <script type="text/javascript">
-        var geocoder;
-        var map;
-        function initialize() {
-          geocoder = new google.maps.Geocoder();
-          var latlng = new google.maps.LatLng(-34.397, 150.644);
-          var mapOptions = {
-            zoom: 8,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          }
-          map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        }
-
-        function codeAddress() {
-          var address = document.getElementById("address").html;
-          geocoder.geocode( { 'address': address}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-              map.setCenter(results[0].geometry.location);
-              var marker = new google.maps.Marker({
-                  map: map,
-                  position: results[0].geometry.location
-              });
-            } else {
-              alert("Geocode was not successful for the following reason: " + status);
-            }
-          });
-        }
-        
-        initialize();
-        codeAddress();
-    </script>
 {% endblock %}
