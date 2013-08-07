@@ -1,19 +1,19 @@
 {% extends 'Magic991MainBundle::layout.html.twig' %}
 
 {% block title %}
-    Dream Homes in Prescott, Arizona For Sale
+    A Dream Home in Prescott, Arizona For Sale
 {% endblock %}
 
 {% block description %}
-    <meta name="description" content="Dream Homes in Prescott, Arizona For Sale"/>
+    <meta name="description" content="A Dream Home in Prescott, Arizona For Sale"/>
     <meta property="og:site_name" content="http://magic991.gcmaz.com" />
     <meta property="fb:admins" content="100003228578475" />
     <meta property="fb:app_id" content="388413197938552" />
     <meta property="og:type" content="music.radio_station" />
-    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/find-main-image.jpg') }}"/>
-    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_realestate') }}"/>
-    <meta property="og:title" content="Dream Homes in Prescott, Arizona For Sale"/> 
-    <meta property="og:description" content="Dream Homes in Prescott, Arizona For Sale"/>
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/logo-magic.png') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_realtor') }}"/>
+    <meta property="og:title" content="A Dream Home in Prescott, Arizona For Sale"/> 
+    <meta property="og:description" content="A Dream Home in Prescott, Arizona For Sale"/>
 {% endblock %}
 
 {% block keywords %}
@@ -61,25 +61,18 @@
             </div>
             <br class="clear"/>
         </div>
-        <h2 class="bangers centered">Prescott's Most Beautiful Homes For Sale</h2>
-        <p id="address" class="re-addy centered">1855 N Camino Cielo Prescott, AZ 86303</p>
-        <hr style="width:90%;background-color:#29344e;border:0;height:1px;" />
+        <h2 class="bangers centered">Dream Home in Prescott</h2>
         <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;" target="_blank">
             <img src="{{asset('images/share-on-facebook.jpg')}}" width="312" height="52" alt="Share on Facebook" style="float:left;margin-left:18px;" />
         </a>
-        <a href="#" onclick="window.open('https://twitter.com/share?text=One+of+Prescotts+Most+Beautiful+Homes+For+Sale','twitter-share-dialog','width=600,height=430');return false;" target="_blank">
+        <a href="#" onclick="window.open('https://twitter.com/share?text=A+Dream+Home+in+Prescott+For+Sale','twitter-share-dialog','width=600,height=430');return false;" target="_blank">
             <img src="{{asset('images/share-on-twitter.jpg')}}" width="312" height="52" alt="Share on Twitter" style="float:right;margin-right:18px;" />
         </a>
-        <br class="clear"/>
-        <img src="{{asset('images/uploads/realestate/1855-n-camino-cielo.jpg')}}" width="612" height="407" alt="Prescott Home For Sale" class="centered re-main"/>
-        <p style="margin:10px 20px;line-height:1.4;">Endless Opportunities. Property includes 3 parcels, guest cottage, barn and endless views. Split up and develop or keep as a compound. Where else can you find 3.53 acres of contiguous property within the city limts and with horse privledges that is relatively flat? Guest cottage is at 1847 Camino Cielo. Come watch the birds float and soak in the views.</p>
+        <br class="clear" /><br/>
+        <iframe src="http://greatcircleradio.com/realtor.php" width="660" height="1200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <br/>
-        <div class="centered">
-            {#<iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode="></iframe>#}
-            <iframe src="http://greatcircleradio.com/map.php" width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div>
         <br/>
-        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_realestate') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_realtor') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
         <br class="clear"/><br/>
     </div>
 {% endblock %}

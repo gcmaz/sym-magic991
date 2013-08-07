@@ -98,7 +98,12 @@ Magic991_weather:
     defaults: { _controller: Magic991MainBundle:Page:weather }
     methods: GET
 
-Magic991_realestate:
-    path: /prescott-homes/{id}
-    defaults: { _controller: Magic991MainBundle:Realestate:index, id: 'default' }
+Magic991_realtor:
+    path: /realtor/{id}
+    defaults: { _controller: Magic991MainBundle:Realtor:show, id: 'default' }
     methods: [GET|POST]
+
+Magic991_realtor2:
+    path: /prescott-dream-home
+    defaults: { _controller: Magic991MainBundle:Realtor:show2 }
+    methods: [GET]
