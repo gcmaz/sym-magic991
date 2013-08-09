@@ -442,6 +442,16 @@ div.info-right p:first-child{
 div.dbl-row p:first-child + p{
 	font-weight:700;
 }
+.onair-link{
+    	font-weight:bold;
+	color:#13a0e5;
+	text-decoration:none;
+	padding-top:5px;
+                display:inline-block;
+}
+.spacer{
+    height:30px;
+}
 
 #concerts-splash{
     background-color:#373737;
