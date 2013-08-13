@@ -52,17 +52,17 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://magic991.gcmaz.com/photos/prescott</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>http://magic991.gcmaz.com/prescott/pet-of-the-week</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://magic991.gcmaz.com/contest/magic-mashup</loc>
+  <loc>http://magic991.gcmaz.com/weather</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://magic991.gcmaz.com/photos/prescott</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

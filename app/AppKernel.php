@@ -23,7 +23,10 @@ class AppKernel extends Kernel
             new Magic991\MainBundle\Magic991MainBundle(),
             new Magic991\SecurityBundle\Magic991SecurityBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-            new Gregwar\CaptchaBundle\GregwarCaptchaBundle()
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -213,6 +213,10 @@ div.notice {
     z-index: 1000;
     overflow: visible !important;
 }
+.pet{
+    background-image: url('../images/320x150/pet-bg.jpg') ;
+    text-align: right;
+}
 /********** START MENU **************/
 .menu_box{}
 .menu_left{

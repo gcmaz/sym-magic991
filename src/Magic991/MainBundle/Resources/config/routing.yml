@@ -75,7 +75,7 @@ Magic991_splash:
 
 Magic991_pet:
     path: /prescott/pet-of-the-week
-    defaults: { _controller: Magic991MainBundle:Page:Pet }
+    defaults: { _controller: Magic991MainBundle:Pet:show }
     methods: [GET]
     
 Magic991_yrmc:
