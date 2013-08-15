@@ -125,6 +125,7 @@ a img { border:0; }
 	text-shadow:1px 1px 1px rgba(0,0,0,.5);
 }
 .feedme{display:none;visibility:hidden;}
+strong {font-weight:700;}
 .loud{
 	line-height:1.5;
 	background-color:#fff;
@@ -213,7 +214,7 @@ div.notice {
     z-index: 1000;
     overflow: visible !important;
 }
-.pet{
+.pet-banner{
     background-image: url('../images/320x150/pet-bg.jpg') ;
     text-align: right;
 }
