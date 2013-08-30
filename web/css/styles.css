@@ -145,12 +145,12 @@ div.notice {
 .unica{
 	font-family: 'Unica One', cursive;
 }
-.noto{
-    font-family: 'Noto Sans', sans-serif;
-}
 .bangers{
     font-family: 'Bangers', cursive;
     letter-spacing: 2px;
+}
+.arial{
+    font-family: Arial, sans-serif;
 }
 .blue{
     color:#0f2359;
