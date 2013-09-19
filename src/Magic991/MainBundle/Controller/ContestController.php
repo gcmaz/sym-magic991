@@ -15,7 +15,13 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Page:contest.html.twig', array(
                     'contest' => $contest
                 ));
-            
+                
+            // 2013 NISSAN VERSA NOTE
+            case 'win-a-nissan-versa-note' :  
+                return $this->render('Magic991MainBundle:Contest:nissanversa.html.twig', array(
+                    'contest' => $contest
+                ));
+                
             // MAGIC MASHUP
             case 'magic-mashup' :
                 return $this->render('Magic991MainBundle:Contest:magicmashup.html.twig', array(

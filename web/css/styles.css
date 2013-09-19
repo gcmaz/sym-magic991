@@ -121,18 +121,7 @@ a img { border:0; }
 	-webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5);
 	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5);
 }
-.textshadow{
-	text-shadow:1px 1px 1px rgba(0,0,0,.5);
-}
 .feedme{display:none;visibility:hidden;}
-strong {font-weight:700;}
-.loud{
-	line-height:1.5;
-	background-color:#fff;
-	border:1px solid #F60;
-	font-weight:bold;
-	padding:10px;
-}
 div.notice {
     width:60%;
     margin:auto;
@@ -142,22 +131,29 @@ div.notice {
     padding:15px;
     font-weight:bold;
 }
-.unica{
-	font-family: 'Unica One', cursive;
+
+/********* FONTS *************/
+
+    /* menu */
+.unica{font-family: 'Unica One', cursive;}
+.bangers{font-family: 'Bangers', cursive;letter-spacing: 2px;}
+.arial{font-family: Arial, sans-serif;}
+
+.blue{color:#2a4f9d;}
+.pink{color:#cc66cc;}
+
+.textshadow{text-shadow:1px 1px 1px rgba(0,0,0,.5);}
+
+strong {font-weight:700;}
+.loud{
+	line-height:1.5;
+	background-color:#fff;
+	border:1px solid #F60;
+	font-weight:bold;
+	padding:10px;
 }
-.bangers{
-    font-family: 'Bangers', cursive;
-    letter-spacing: 2px;
-}
-.arial{
-    font-family: Arial, sans-serif;
-}
-.blue{
-    color:#0f2359;
-}
-.pink{
-    color:#cc66cc;
-}
+/****************************/
+
 .logo_box{}
 .sponsor_box{
     margin: -10px auto 10px;
@@ -469,15 +465,16 @@ div.dbl-row p:first-child + p{
 .contest{
     background-color:#fff;
     margin:auto;
-    width:660px;
+    width:662px;
 }
 .contest p{
-    font-weight:700;
-    line-height:1.4;
-    font-size:1.1em;
+    font-weight:500;
+    line-height:1.2;
+    font-size:1em;
     color:#000;
     width:95%;
     margin:auto;
+    padding:10px;
 }
 .sponsors ul li a img{
 	margin:15px auto;
