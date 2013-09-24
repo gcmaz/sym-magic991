@@ -19,12 +19,14 @@
 {% block keywords %}
     <meta name="keywords" content="events, happenings, things to do, Prescott, Prescott Valely, Northern Arizona"/>
 {% endblock %}
+
+{% block leftcol_fb %}{% endblock %}
     
-{# block leftcol_ad %}
-    <a href="http://maverik.com/" target="_blank">
-        <img src="{{asset('images/300x250/maverik-7-5-13.gif')}}" alt="Maverik" width="300" height="250" border="0"/>
+{% block leftcol_ad %}
+    <a href="http://www.dominos.com/" target="_blank">
+        <img src="{{asset('images/300x250/dominos.jpg')}}" width="300" height="250" alt="Dominos Pizza" style="margin:5px auto;"/>
     </a>
-{% endblock #}
+{% endblock %}
     
 {# block exp_leaderboard %}
     <div id="expleaderboard">
