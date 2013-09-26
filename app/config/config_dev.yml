@@ -27,3 +27,8 @@ assetic:
 
 swiftmailer:
     delivery_address: webmaster@magic991.com
+
+sonata_media:
+    cdn:
+        server:
+            path: /gcmaz/web/uploads/media

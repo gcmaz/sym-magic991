@@ -29,12 +29,12 @@ Magic991_songrequest:
     methods: [GET|POST]
     
 Magic991_concerts:
-    path: /concerts/prescott/arizona
-    defaults: { _controller: Magic991MainBundle:Page:concerts }
+    path: /concerts
+    defaults: { _controller: Magic991MainBundle:Concert:show }
     methods: GET
   
-Magic991_concerts2:
-    path: /concerts
+Magic991_concerts_old:
+    path: /concerts/prescott/arizona
     defaults: { _controller: Magic991MainBundle:Page:concerts }
     methods: GET
 
