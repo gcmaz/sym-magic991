@@ -30,8 +30,8 @@ class PhotosController extends Controller
                 $display_block = "
                     <h1>Select A Gallery:</h1>
                     <br/>
-                    <p><a href=\"$pageUrl?a=333184483435255\">
-                            Gallery One
+                    <p><a href=\"$pageUrl?a=556401554429388\">
+                        TEACHERS APPRECIATION NIGHT 2013
                     </a></p>
                    ";
         }
