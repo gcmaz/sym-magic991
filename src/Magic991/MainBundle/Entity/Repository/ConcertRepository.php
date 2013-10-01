@@ -15,14 +15,17 @@ class ConcertRepository extends EntityRepository
     public function getConcert()
     //$gid is above param passed in if narrowing
     {
+        $today = new \DateTime();
         $qb = $this->createQueryBuilder('c')
                 ->select('c')
                 //->where('g.id = :gid')
                 ->where('c.showKTMG = :k')
                 ->andWhere('c.published = :p')
+                ->andWhere('c.concertDate >= :d')
                 ->addOrderBy('c.concertDate', 'ASC')
                 ->setParameter('k', 1)
                 ->setParameter('p', 1)
+                ->setParameter('d', $today->format('Y-m-d'))
                 //$qb->setMaxResults(1)
                 ;
                 
