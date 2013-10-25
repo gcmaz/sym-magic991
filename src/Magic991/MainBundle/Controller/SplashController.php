@@ -15,6 +15,12 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
 
+            // GIFT OF WARMTH
+            case 'gift-of-warmth-coat-drive' :
+                return $this->render('Magic991MainBundle:Splash:giftofwarmth.html.twig', array(
+                    'splash' => $splash
+                )); 
+                
             // TEACHERS APPRECIATION NIGHT
             case 'teachers-appreciation-night' :
                 return $this->render('Magic991MainBundle:Splash:teachersnight.html.twig', array(
