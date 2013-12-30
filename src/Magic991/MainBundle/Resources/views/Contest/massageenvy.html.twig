@@ -1,0 +1,90 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Massage Envy's Office of the Week!  Win free massages for your office!
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Enter Massage Envy's Office of the Week Contest!  Win free chair massages for your office!"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/splash/massage-envy-office-otw.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'massage-envy-office-of-the-week'}) }}"/>
+    <meta property="og:title" content="Massage Envy's Office of the Week!  Win free massages for your office!"/> 
+    <meta property="og:description" content="Enter Massage Envy's Office of the Week Contest!  Win free chair massages for your office!"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="massage envy, office of the week, win, free, massage"/>
+{% endblock %}
+    
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        form.msgcontest { font-size: 10px;color:#f6ad40; margin-top:25px;}
+        form.msgcontest div { clear: left; }
+        form.msgcontest label { float: left; text-align: right; width: 40%; font-weight: 700; vertical-align: top; padding:10px 0 0 0; color:#ffffcc; font-size:1.3em;}
+        form.msgcontest input[type="text"],
+        form.msgcontest input[type="email"]
+            { width: 55%; line-height: 1.5; font-size: 1.2em; min-height: 1.5; margin:4px 0;}
+        form.msgcontest select { width:200px; line-height: 1.5; font-size: 1.2em; min-height: 1.5; }
+        form.msgcontest textarea { width: 55%; height: 70px; line-height: 1.5; font-size: 1.2em; margin:4px 0;}
+        form.msgcontest input[type="submit"] { margin-left: 40%; width: 55%; line-height: 1.5; font-size: 1.2em; min-height: 1.5; }
+        form.msgcontest ul li { color: #ff0000; margin-bottom: 5px; }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% if status == 'live' %}
+    <div style="background-color:#e4ddd3;width:660px;margin:0 auto;padding:0;">
+            <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'massage-envy-office-of-the-week'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="true" data-font="arial" style="margin:3px auto;padding:0;"></div>
+            {% for flashMessage in app.session.flashbag.get('massagenotice') %}
+                <div class="notice" style="background-color:#4f307a;">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+            <br class="clear"/>
+    </div>
+    <div style="background-color:#e4ddd3;background-image:url('{{asset("images/splash/massage-envy-office-otw.jpg")}}');background-repeat:no-repeat;width:660px;height:470px;margin:auto;padding-top:220px;">
+          <div style="float:left;width:250px;height:200px;">
+          </div>
+          <div style="float:right;text-align:right;margin-right:40px;">
+              <form action="{{ path('Magic991_contest', {'contest': 'massage-envy-office-of-the-week'}) }}" method="post" {{ form_enctype(form) }} class="msgcontest">
+                  {{ form_errors(form) }}
+                  {{ form_row(form.name) }}
+                  {{ form_row(form.email) }}
+                  {{ form_row(form.phone) }}
+                  <div>
+                  {{ form_label(form.workplace, 'Where You Work') }}
+                  {{ form_errors(form.workplace) }}
+                  {{ form_widget(form.workplace) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.workplaceaddy, 'Work Address') }}
+                  {{ form_errors(form.workplaceaddy) }}
+                  {{ form_widget(form.workplaceaddy) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.workplacetotal, 'How Many at Work') }}
+                  {{ form_errors(form.workplacetotal) }}
+                  {{ form_widget(form.workplacetotal) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.whywin, 'Why You Should Win') }}
+                  {{ form_errors(form.whywin) }}
+                  {{ form_widget(form.whywin) }}
+                  </div>
+                  {{ form_rest(form) }}
+                  <input type="submit" value="Submit" />
+              </form>
+          </div>
+        <br class="clear"/>
+        </div>
+    
+    {% elseif status == 'dead' %}
+        <h1>Sorry, this contest is not active right now</h1>
+    {% endif %}
+        
+{% endblock %}
