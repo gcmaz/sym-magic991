@@ -17,9 +17,6 @@
     <div class="mainbox_box">
         <div class="slider_wrapper theme_default">
             <div id="slider" class="nivoSlider">
-                <a href="http://www.gcmaz.com/contest/trick-shot" target="_blank">
-                    <img src="{{asset('images/660x250/harlem-globetrotters-trick-shot.jpg')}}" width="" height="" alt="Show us your Trick Shot and Win Tickets to the Harlem GlobeTrotters" />
-                </a>
                 <a href="{{path('Magic991_splash', {'splash':'gift-of-warmth-coat-drive'})}}">
                     <img src="{{ asset('images/660x250/gift-of-warmth.jpg') }}" width="660" height="250" alt="Gift of Warmth Coat Drive">
                 </a>
@@ -45,9 +42,14 @@
         <p style="float:right;color:#414f73;font-size:10px;font-weight:700;margin-right:25px;">Instagram Photos</p>
         <br class="clear"/><br/><br/>
         <div class="box_320x150 box_left dropshadow">
-            <a href="http://perks.mymagicstation.com/asp3/lwcodes.aspx" target="_blank">
-                <img src="{{ asset('images/320x150-word.jpg') }}" width="320" height="150" alt="Play The Perks Word"/>
-            </a>
+            <div class="nivoSlider" id="slider2">
+                <a href="{{path('Magic991_contest',{'contest':'massage-envy-office-of-the-week'})}}">
+                    <img src="{{asset('images/320x150/massage-envy.jpg')}}" width="320" height="150" alt="Enter here to win Massage Envys Office of the Week">
+                </a>
+                <a href="http://perks.mymagicstation.com/asp3/lwcodes.aspx" target="_blank">
+                    <img src="{{ asset('images/320x150/word.jpg') }}" width="320" height="150" alt="Play The Perks Word"/>
+                </a>
+            </div>
         </div>
         <a href="{{ path('Magic991_pet')}}" >
             <div class="box_320x150 box_right dropshadow pet-banner">
@@ -70,6 +72,14 @@
                 pauseTime: 5000,
                 directionNav: false,
                 pauseOnHover: false
+            });
+            $('#slider2').nivoSlider({
+                effect: 'fade',
+                pauseTime: 5000,
+                directionNav: false,
+                controlNav: false,
+                pauseOnHover: false,
+                randomStart: true
             });
         });
      });
