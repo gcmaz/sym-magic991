@@ -1,0 +1,60 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Fusion of Movement and Complete Nutrition presents the Weight No More 90 Day Weight Loss Challenge
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Weight No More 90 Day Weight Loss Challenge Presented By Fusion of Movement and Complete Nutrition"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/660x250/weight-no-more.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_splash', {'splash': 'weight-no-more-challenge'}) }}"/>
+    <meta property="og:title" content="Fusion of Movement and Complete Nutrition presents the Weight No More 90 Day Weight Loss Challenge"/> 
+    <meta property="og:description" content="Weight No More 90 Day Weight Loss Challenge Presented By Fusion of Movement and Complete Nutrition"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Weight No More, weight loss challenge, Fusion of Movement, Complete Nutrition, Prescott"/>
+{% endblock %}
+
+{% block content %}
+    <div class="arial centered contest">
+        <div style="margin:0 auto;padding:0;background:#ebf6de;">
+            <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_splash', {'splash':'weight-no-more-challenge'}) }}" data-send="true" data-width="660" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:0;"></div>
+        </div>
+        <img src="{{ asset('images/660x250/weight-no-more.jpg') }}" width="660" height="250" usemap="#weight" alt="Weight No More Weight Loss Challenge " />
+        <p style="font-weight:500;font-size:1em;width:90%;">
+            This is a team challenge where you and a friend could win cash and prizes if you're the team with the highest percentage of weight loss!
+        </p>
+        <p style="font-weight:500;font-size:1em;width:90%;">
+            Sign up at <a href="http://fusionofmovement.com/welcome-to-the-fusion-of-movement-family/" target="_blank" style="text-decoration:none;color:#1d52b3;">Fusion of Movement 6601 East 2nd Street in Prescott Valley</a> or visit <a href="https://www.facebook.com/FusionOfMovement" target="_blank" style="text-decoration:none;color:#1d52b3;">Fusion of Movement on Facebook</a> or <a href="{{asset('/pdf/weight-no-more-signup-rules.pdf')}}" target="_blank" style="text-decoration:none;color:#1d52b3;">print a sign up sheet</a>.
+        </p>
+        <p style="font-weight:600;font-size:1em;width:90%;">
+            Weigh In is 9am January 18th at Fusion of Movement.
+        </p>
+        <div class="clear centered sponsors">
+            <p style="font-size:0.8em;font-weight:bold;color:#666;padding:3px;margin-top:10px;background-color:#eaeaea;">Sponsors</p>
+            <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="http://www.fusionofmovement.com" target="_blank"><img src="{{asset('images/sponsors/fusion-of-movement.jpg')}}" width="130" height="auto" /></a></li>
+                <li><a href="http://www.dexknows.com/business_profiles/lori_borgen_dba_martin_and_associates-b2925298" target="_blank"><img src="{{asset('images/sponsors/lori-borgen.jpg')}}" width="130" height="auto" style="margin-top:20px;"/></a></li>
+            </ul>
+            <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="http://www.completenutrition.com/stores/6157/" target="_blank"><img src="{{asset('images/sponsors/complete-nutrition.jpg')}}" width="140" height="auto" /></a></li>
+                <li><a href="https://www.facebook.com/TheFlooringShack" target="_blank"><img src="{{asset('images/sponsors/chris-n-nates.jpg')}}" width="115" height="auto" /></a></li>
+            </ul>
+             <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="https://www.facebook.com/pages/Magic-991/175911715829200" target="_blank"><img src="{{asset('images/sponsors/991magic.jpg')}}" width="140" height="auto" /></a></li>
+            </ul>
+            <br class="clear" />
+        </div>
+        <p><a href="{{asset('/pdf/weight-no-more-signup-rules.pdf')}}" target="_blank" style="text-decoration:none;color:#1d52b3;">Print Signup Sheet and Official Rules &raquo;</a></p>
+        <br/>
+    </div>
+    <map id="weight" name="weight">
+        <area shape="rect" coords="225,0,400,120" target="_blank" href="http://www.fusionofmovement.com" />
+        <area shape="rect" coords="420,0,610,110" target="_blank" href="http://www.completenutrition.com/stores/6157/" />
+    </map>
+{% endblock %}

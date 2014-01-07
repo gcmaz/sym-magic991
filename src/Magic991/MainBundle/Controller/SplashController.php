@@ -15,6 +15,12 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
 
+            // WEIGHT NO MORE
+            case 'weight-no-more-challenge' :
+                return $this->render('Magic991MainBundle:Splash:weightnomore.html.twig', array(
+                    'splash' => $splash
+                ));
+                
             // BOOT DROP
             case 'boot-drop-prescott-2014' :
                 return $this->render('Magic991MainBundle:Splash:bootdrop.html.twig', array(
