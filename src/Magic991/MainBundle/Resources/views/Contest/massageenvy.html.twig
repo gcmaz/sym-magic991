@@ -49,10 +49,9 @@
     </div>
     <div style="background-color:#e4ddd3;background-image:url('{{asset("images/splash/massage-envy-office-otw.jpg")}}');background-repeat:no-repeat;width:660px;height:470px;margin:auto;padding-top:220px;">
         <a href="http://www.massageenvy.com/clinics/AZ/Prescott.aspx" target="_blank">  
-            <div style="float:left;width:250px;height:430px;">
-            </div>
+            <div style="float:left;width:250px;height:400px"></div>
         </a>
-          <div style="float:right;text-align:right;margin-right:40px;">
+          <div style="float:right;text-align:right;margin-right:10px;width:360px;">
               <form action="{{ path('Magic991_contest', {'contest': 'massage-envy-office-of-the-week'}) }}" method="post" {{ form_enctype(form) }} class="msgcontest">
                   {{ form_errors(form) }}
                   {{ form_row(form.name) }}
@@ -81,8 +80,11 @@
                   {{ form_rest(form) }}
                   <input type="submit" value="Submit" />
               </form>
-              <br />
-              <p style="color:#fff;margin:auto;text-align: center;font-size:0.9em;">Every Wednesday morning<br/>Magic 99.1’s Leza will announce a winner!</p>
+              <div style="width:90%;text-align:center;">
+                <p style="color:#fff;font-size:0.9em;margin:15px auto;">Every Wednesday morning Magic 99.1’s Leza will announce a winner!</p>
+                <br/>
+                <p style="color:#8f7f9a;font-size:0.8em;margin:15px auto;">Promotion valid in Prescott, Prescott Valley, Chino Valley and Dewey only</p>
+              </div>
           </div>
         <br class="clear"/>
         </div>
