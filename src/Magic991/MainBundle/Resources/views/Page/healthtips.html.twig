@@ -1,0 +1,51 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Health Tips from Bend Hot Yoga and Complete Nutrition for Prescott and Prescott Valley, AZ
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Bend Hot Yoga and Complete Nutrition have joined forces to help you with your 2014 health goals. Below are health tips to help you start or continue down the road of weight loss, increased energy, and more."/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/health-tips.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_healthtips') }}"/>
+    <meta property="og:title" content="Health Tips from Bend Hot Yoga and Complete Nutrition for Prescott and Prescott Valley, AZ"/> 
+    <meta property="og:description" content="Bend Hot Yoga and Complete Nutrition have joined forces to help you with your 2014 health goals. Below are health tips to help you start or continue down the road of weight loss, increased energy, and more."/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="health tips, lose weight, bend hot yoga, complete nutrition, prescott, az"/>
+{% endblock %}
+    
+{% block styles %}
+    {{parent()}}
+    <link href='http://fonts.googleapis.com/css?family=Donegal+One' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .healthtips{text-align:left;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;margin-bottom:30px;padding-bottom:20px;}
+        p.htinfo{margin:20px auto;width:90%;padding:10px;font-weight:600;line-height:1;font-size:0.9em;}
+        p.htinfo a{font-weight:700;text-decoration:none;color:#039;}
+        #health{margin:20px 5%}
+        #health p{line-height:inherit;margin:0;padding:0;}
+        #health p span strong, #health p strong {font-weight:700;}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="healthtips" style="background-color:#fff;">
+        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_healthtips') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial" style="margin:3px 5%;padding:0;"></div>
+        <p class="htinfo"><a href="http://hotyogaprescott.com/" target="_blank">Bend Hot Yoga</a> and <a href="https://www.facebook.com/CompleteNutritionPrescottValleyArizona" target="_blank">Complete Nutrition</a> have joined forces to help you with your 2014 health goals. Below are health tips to help you start or continue down the road of weight loss, increased energy, and more.</p>
+        <img src="{{asset('images/splash/health-tips.jpg')}}" width="660" height="200" alt="Health Tips from Bend Hot Yoga and Complete Nutrition for Prescott and Prescott Valley, AZ" border="0" class="centered" usemap="#ht"/>
+        <map id="ht" name="ht">
+            <area shape="rect" coords="0,0,218,200" href="http://hotyogaprescott.com/" target="_blank" alt="Bend Hot Yoga Prescott AZ" />
+            <area shape="rect" coords="219,0,445,200" href="https://www.facebook.com/CompleteNutritionPrescottValleyArizona" target="_blank" alt="Complete Nutrition Prescott Valley AZ" />
+        </map>
+        <div id="health">
+            {% for entity in entities %}
+        	{{ entity.text|raw }}
+             {% endfor %}
+        </div>
+    </div>
+{% endblock %}

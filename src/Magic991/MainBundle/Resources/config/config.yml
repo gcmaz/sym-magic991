@@ -14,12 +14,17 @@ ivory_ck_editor:
             toolbar:  "yrmc_toolbar"
             ui_color: "#ffffff"
             height: "550"
+        healthtips_config:
+            toolbar:  "healthtips_toolbar"
+            ui_color: "#ffffff"
+            height: "550"
         #my_config_2:
             #toolbar:  "my_toolbar_2"
             #ui_color: "#ffffff"
     toolbars:
         configs:
             yrmc_toolbar: [ "@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2" ]
+            healthtips_toolbar: [ "@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2" ]
             #my_toolbar_2: [ "@document", "/", "@tool" ]
         items:
             document: ["Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "Undo", "Redo"  ]

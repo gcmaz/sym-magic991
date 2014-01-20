@@ -1,0 +1,46 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Health Tips from Bend Hot Yoga and Complete Nutrition for Prescott and Prescott Valley, AZ
+{% endblock %}
+    
+{% block styles %}
+    {{parent()}}
+    <style type="text/css">
+        .healthtips{text-align:left;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;margin-bottom:30px;padding-bottom:20px;}
+        p.htinfo{margin:20px auto;width:90%;padding:10px;font-weight:600;line-height:1;font-size:0.9em;}
+        p.htinfo a{font-weight:700;text-decoration:none;color:#039;}
+        #health{margin-left:10px;line-height:1;}
+        #health p{line-height:inherit;margin:0;padding:0;}
+        #health p span strong, #health p strong {font-weight:700;}
+    </style>
+{% endblock %}
+    
+{% block js_top %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{asset('bundles/ivoryckeditor/ckeditor.js')}}"></script>
+{% endblock %}
+
+{% block leftcol_mc %}<br/><br/><br/><br/><br/><br/><br/><br/><br/>{% endblock %}
+
+{% block leftcol_fb %}<br/><br/><br/><br/><br/><br/><br/><br/><br/>{% endblock %}
+    
+{% block content %}
+    <div class="healthtips" style="background-color:#fff;">
+        <p class="htinfo"><a href="" target="_blank">Bend Hot Yoga</a> and <a href="" target="_blank">Complete Nutrition</a> have joined forces to help you with your 2014 health goals. Below are health tips to help you start or continue down the road of weight loss, increased energy, and more.</p>
+        <img src="{{asset('images/splash/health-tips.jpg')}}" width="660" height="200" alt="Health Tips from Bend Hot Yoga and Complete Nutrition for Prescott and Prescott Valley, AZ" border="0" class="centered"/>
+        <div id="health">
+            
+            <form action="{{ path('Magic991_healthtips_edit')}}" method="post" class="editform">
+                {{ form_errors(form) }}
+                {{ form_label(form.text, ' ') }}
+                {{ form_errors(form.text) }}            
+                {{ form_widget(form.text) }}
+                {{ form_rest(form) }}
+                <input type="submit" value="Submit" />
+            </form>
+            <br class="clear"/>
+            
+        </div>
+    </div>
+{% endblock %}

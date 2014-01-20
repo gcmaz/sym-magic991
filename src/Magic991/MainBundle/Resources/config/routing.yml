@@ -87,6 +87,16 @@ Magic991_yrmc_edit:
     path: /yrmc/
     defaults: { _controller: Magic991MainBundle:Yrmc:Edit }
     methods: [GET|POST]
+
+Magic991_healthtips:
+    path: /prescott/health-tips
+    defaults: { _controller: Magic991MainBundle:Healthtips:Show }
+    methods: [GET]
+    
+Magic991_healthtips_edit:
+    path: /healthtips/
+    defaults: { _controller: Magic991MainBundle:Healthtips:Edit }
+    methods: [GET|POST]
     
 Magic991_jobs:
     path: /jobs

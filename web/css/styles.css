@@ -176,7 +176,7 @@ strong {font-weight:700;}
     height:150px;
     display:block;
     overflow:hidden;
-    /*margin-top:-14px;*/
+    margin-top:5px;
 }
 .mainbox_box{
     background-image:url('../images/bg-main-box.png');

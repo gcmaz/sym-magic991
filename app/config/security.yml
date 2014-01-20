@@ -15,6 +15,7 @@ security:
             memory:
                 users:
                     editor:  { password: edit4YRMC, roles: [ 'ROLE_USER' ] }
+                    healthtips: { password: EDIT4bhycn, roles: ['ROLE_USER'] }
 
     firewalls:
         yrmc_editor:
@@ -34,4 +35,5 @@ security:
 
     access_control:
         - { path: ^/yrmc, roles: ROLE_USER }
+        - { path: ^/healthtips, roles: ROLE_USER }
         
