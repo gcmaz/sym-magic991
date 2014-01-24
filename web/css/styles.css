@@ -147,8 +147,7 @@ div.notice {
 .pink{color:#cc66cc;}
 
 .textshadow{text-shadow:1px 1px 1px rgba(0,0,0,.5);}
-
-strong {font-weight:700;}
+strong, .bold {font-weight:700;}
 .loud{
 	line-height:1.5;
 	background-color:#fff;
