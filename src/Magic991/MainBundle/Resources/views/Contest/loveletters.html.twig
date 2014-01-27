@@ -48,7 +48,7 @@
             <br class="clear"/>
     </div>
     <div class="arial loveletters">
-        <img src="{{asset("images/660x250/love-letters-leza.jpg")}}" width="660" height="250" alt="Love Letters with Leza"/>
+        <img src="{{asset("images/660x250/love-letters-leza.jpg")}}" width="660" height="250" alt="Love Letters with Leza" usemap="#pfs"/>
         <p style="color:#fff;text-align:left;width:90%;margin:5px auto;">
             Submit your Love Letter to be ready on the air the week of Valentine's Day!  If <span class="bold">Leza reads your letter on the air</span>, you will win a free <span class="bold">Heart Shaped Pizza</span> from <a href="http://www.papajohns.com" target="_blank">Papa John's</a> and will be a finalist for the grand prize below.
         </p>
@@ -58,15 +58,18 @@
         <p style="color:#fff;text-align:left;width:90%;margin:5px auto;">
             Leza will arrange to have the <span class="bold">winner read their love letter on the air on Valentine's Day to the person they wrote it to!</span>  Winner will also receive a <span class="bold">dozen roses</span> from <a href="http://www.prescottflowershopaz.com" target="_blank">Prescott Flower Shop</a> and a <span class="bold">massage</span> from <a href="https://www.facebook.com/MassageEnvyPrescott" target="_blank">Massage Eny Prescott</a>.
         </p>
-        <div style="float:right;width:200px;height:400px;padding-top:30px;">
-            <a href="https://www.facebook.com/MassageEnvyPrescott" target="_blank">
-                <img src="{{asset('images/sponsors/massage-envy.jpg')}}" width="150" height="auto" alt="Massage Envy Prescott" style="padding:10px 0;"/>
-            </a>
+        <div style="float:right;width:200px;">
             <a href="http://www.prescottflowershopaz.com/" target="_blank">
                 <img src="{{asset('images/sponsors/prescott-flower-shop.jpg')}}" width="100" height="auto" alt="Prescott Flower Shop" style="padding:10px 0;"/>
             </a>
+            <a href="https://www.facebook.com/MassageEnvyPrescott" target="_blank">
+                <img src="{{asset('images/sponsors/massage-envy.jpg')}}" width="150" height="auto" alt="Massage Envy Prescott" style="padding:10px 0;"/>
+            </a>
             <a href="http://www.papajohns.com" target="_blank">
                 <img src="{{asset('images/sponsors/papa-johns.jpg')}}" width="150" height="auto" alt="Papa Johns Prescott" style="padding:10px 0;"/>
+            </a>
+            <a href="http://www.hassayampainn.com/" target="_blank">
+                <img src="{{asset('images/sponsors/hassayampa-inn.jpg')}}" width="150" height="auto" alt="Hassayampa Inn" style="padding:10px 0;"/>
             </a>
         </div>
         <form action="{{ path('Magic991_contest', {'contest': 'love-letters-with-leza'}) }}" method="post" {{ form_enctype(form) }} class="letter">
@@ -85,7 +88,9 @@
         </form>
         <br class="clear"/>
     </div>
-    
+    <map name="pfs" id="pfs">
+        <area shape="rect" coords="575,150,660,250" href="http://www.prescottflowershopaz.com/" target="_blank" alt="Presented by Prescott Flower Shop" />
+    </map>
     {% elseif status == 'dead' %}
         <h1>Sorry, this contest is not active right now</h1>
     {% endif %}
