@@ -50,7 +50,7 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Contest:loveletters.html.twig', array(
                     'form' => $form->createView(),
                     'contest' => $contest,
-                    'status' => 'live'
+                    'status' => 'dead'
                 ));
                 
             // MASSAGE ENVY
