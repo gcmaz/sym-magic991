@@ -10,8 +10,8 @@
     <meta property="fb:admins" content="100003228578475" />
     <meta property="fb:app_id" content="388413197938552" />
     <meta property="og:type" content="music.radio_station" />
-    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/660x250/love-letters-leza.jpg') }}"/>
-    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'love-letters-with-leza'}) }}"/>
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/splash/april-abs-contest.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'april-abs'}) }}"/>
     <meta property="og:title" content="Magic is turning APRIL into AB-ril!  April Abs Contest"/> 
     <meta property="og:description" content="April Abs Contest - Magic is turning APRIL into AB-ril!  Show off those tummies! - Northern Arizona Radio"/>
 {% endblock %}
@@ -22,9 +22,14 @@
 
 
 {% block content %}
-    <img src="{{asset('images/splash/april-abs-contest.jpg')}}" width="448" height="183" alt="Ab-ril Abs Contest on Magic 99.1" />
-    <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'april-abs'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="false" data-font="arial" style="margin:3px 5%;padding:0;"></div>
-    <iframe src="http://digitalivy.com/EDEDIK" width="100%" height="1000" style="min-height:1000px">  
-        <p>Your browser does not support iframes. Please visit <a href="http://digitalivy.com/EDEDIK">http://digitalivy.com/EDEDIK</a>.</p>  
-    </iframe>
+    <div style="background:#fff">
+        <a href="https://www.facebook.com/CompleteNutritionPrescottValleyArizona" target="_blank">
+            <img src="{{asset('images/sponsors/complete-nutrition.jpg')}}" width="200" height="auto" alt="Complete Nutrition" align="left" style="height:auto;padding:5px;"/>
+        </a>
+        <img src="{{asset('images/splash/april-abs-contest.jpg')}}" width="379" height="auto" alt="Ab-ril Abs Contest on Magic 99.1" align="right" style="height:auto;padding:5px;"/>
+        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'april-abs'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="false" data-font="arial" style="margin:3px 5%;padding:0;"></div>
+        <iframe src="http://digitalivy.com/EDEDIK" width="100%" height="1000" style="min-height:1000px">  
+            <p>Your browser does not support iframes. Please visit <a href="http://digitalivy.com/EDEDIK">http://digitalivy.com/EDEDIK</a>.</p>  
+        </iframe>
+    </div>
 {% endblock %}
