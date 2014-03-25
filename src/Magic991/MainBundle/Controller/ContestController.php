@@ -26,6 +26,12 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Contest:april-abs.html.twig', array(
                     'contest' => $contest
                 ));
+                
+            // IPAD MINI GIVEAWAY
+            case 'ipad-mini-giveaway' :  
+                return $this->render('Magic991MainBundle:Contest:ipad-giveaway.html.twig', array(
+                    'contest' => $contest
+                ));
 
             // LOVE LETTERS
             case 'love-letters-with-leza' :  

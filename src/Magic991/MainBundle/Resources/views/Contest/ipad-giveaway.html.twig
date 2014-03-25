@@ -1,0 +1,35 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+    Win an iPad Mini! Compliments of The Flooring Shack
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Win an iPad Mini! Compliments of The Flooring Shack and Magic 99.1.  Enter the keyword to enter."/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/splash/ipad-mini-giveaway.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'ipad-mini-giveaway'}) }}"/>
+    <meta property="og:title" content="Win an iPad Mini! Compliments of The Flooring Shack!"/> 
+    <meta property="og:description" content="Win an iPad Mini! Compliments of The Flooring Shack and Magic 99.1.  Enter the keyword to enter."/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="ipad mini giveaway, prescott radio, contest"/>
+{% endblock %}
+
+
+{% block content %}
+    <div style="background:#fff">
+        <img src="{{asset('images/splash/ipad-mini-giveaway.jpg')}}" width="660" height="305" alt="iPad Mini Giveaway" usemap="#ipad"/>
+        {#<div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'ipad-mini-giveaway'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="false" data-font="arial" style="margin:3px 5%;padding:0;"></div>#}
+        <iframe src="http://digitalivy.com/5QRJSY" width="100%" height="1000"> 
+            <p>Your browser does not support iframes. Please visit <a href="http://digitalivy.com/5QRJSY">http://digitalivy.com/5QRJSY</a>.</p> 
+        </iframe>
+    </div>
+    <map name="ipad" id="ipad">
+        <area shape="rect" coords="490,0,660,112" href="https://www.facebook.com/TheFlooringShack" target="_blank" alt="The Flooring Shack">
+    </map>
+{% endblock %}
