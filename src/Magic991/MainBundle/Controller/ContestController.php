@@ -20,6 +20,12 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Page:contest.html.twig', array(
                     'contest' => $contest
                 ));
+                
+            // APRIL AB-RIL ABS
+            case 'april-abs' :  
+                return $this->render('Magic991MainBundle:Contest:april-abs.html.twig', array(
+                    'contest' => $contest
+                ));
 
             // LOVE LETTERS
             case 'love-letters-with-leza' :  
