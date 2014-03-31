@@ -1,0 +1,34 @@
+{% extends 'Magic991MainBundle::layout.html.twig' %}
+
+{% block title %}
+   Magic 99.1 has your key to The Magic Kingdom!  Win a trip to Disneyland!
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Magic 99.1 has your key to The Magic Kingdom!  Win a trip to Disneyland!"/>
+    <meta property="og:site_name" content="http://magic991.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="388413197938552" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://magic991.gcmaz.com{{ asset('images/660x250/magic-has-your-key-to-the-magic-kingdom.jpg') }}"/>
+    <meta property="og:url" content="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'magic-has-your-key-to-the-magic-kingdom'}) }}"/>
+    <meta property="og:title" content="Magic 99.1 has your key to The Magic Kingdom!  Win a trip to Disneyland!"/> 
+    <meta property="og:description" content="Magic 99.1 has your key to The Magic Kingdom!  Win a trip to Disneyland and many more daily prizes!"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="key to magic kingdom, magic radio contest, prescott"/>
+{% endblock %}
+
+
+{% block content %}
+    <div style="background:#fff;min-height:600px;">
+        <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'magic-has-your-key-to-the-magic-kingdom'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="false" data-font="arial" style="margin:3px 5%;padding:0;"></div>
+        <img src="{{asset('images/660x250/magic-has-your-key-to-the-magic-kingdom.jpg')}}" width="660" height="250" alt="Magic has your key to the Magic Kingdom" />
+        <p style="font-size:1.5em;font-weight:600;margin-top:50px;">
+            Contest begins Monday April 14th!
+            <br/><br/>
+            Stay tuned for more details!
+        </p>
+    </div>
+{% endblock %}

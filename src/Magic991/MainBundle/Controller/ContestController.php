@@ -20,6 +20,12 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Page:contest.html.twig', array(
                     'contest' => $contest
                 ));
+
+            // MAGIC HAS KEY TO MAGIC KINGDOM
+            case 'magic-has-your-key-to-the-magic-kingdom' :  
+                return $this->render('Magic991MainBundle:Contest:keytomagickingdom.html.twig', array(
+                    'contest' => $contest
+                ));
                 
             // APRIL AB-RIL ABS
             case 'april-abs' :  

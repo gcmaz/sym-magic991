@@ -13,18 +13,21 @@
 
 {% block leftcol_fb %}{% endblock %}
     
-{# block exp_leaderboard %}
+{% block exp_leaderboard %}
     <div id="expleaderboard">
-        <a href="{{path('Magic991_healthtips')}}">
-            <img src="{{ asset('images/660x150/health-tips.jpg') }}" width="660" height="150" alt="Health Tips from Bend Hot Yoga and Complete Nutrition" />
+        <a href="{{path('Magic991_contest', {'contest':'ipad-mini-giveaway'})}}">
+            <img src="{{ asset('images/660x150/win-ipad-mini.jpg') }}" width="660" height="150" alt="Win an iPad Mini Here" />
         </a>
     </div>
-{% endblock #}
+{% endblock %}
     
 {% block content %}
     <div class="mainbox_box">
         <div class="slider_wrapper theme_default">
             <div id="slider" class="nivoSlider">
+                <a href="{{path('Magic991_contest', {'contest':'magic-has-your-key-to-the-magic-kingdom'})}}">
+                    <img src="{{asset('images/660x250/magic-has-your-key-to-the-magic-kingdom.jpg')}}" width="660" height="250" alt="Magic has your key to the Magic Kingdom" />
+                </a>
                 <img src="{{ asset('images/660x250/default-1.jpg') }}" data-thumb="{{ asset('images/660x250/default-1.jpg') }}" width="660" height="250" alt="Adult Contemporary Radio - Prescott Arizona - Magic 99.1">
             </div>
         </div>
