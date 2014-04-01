@@ -22,13 +22,27 @@
 
 
 {% block content %}
-    <div style="background:#fff;min-height:600px;">
+    <div style="background:#fff;min-height:600px;font-weight:600;line-height:1.5;">
         <div class="fb-like" data-href="http://magic991.gcmaz.com{{ path('Magic991_contest', {'contest': 'magic-has-your-key-to-the-magic-kingdom'}) }}" colorscheme="dark" data-send="true" data-width="640" data-show-faces="false" data-font="arial" style="margin:3px 5%;padding:0;"></div>
         <img src="{{asset('images/660x250/magic-has-your-key-to-the-magic-kingdom.jpg')}}" width="660" height="250" alt="Magic has your key to the Magic Kingdom" />
-        <p style="font-size:1.5em;font-weight:600;margin-top:50px;">
+        <p style="font-size:1.5em;font-weight:600;margin-top:20px;">
             Contest begins Monday April 14th!
-            <br/><br/>
-            Stay tuned for more details!
+        </p>
+        <p style="margin:20px">
+            Listen at <span style="color: #ff0000;font-weight:700;">2:10p</span> and <span style="color: #ff0000;font-weight:700;">5:10p</span> for the <span style="color: #ff0000;font-weight:700;">HAPPIEST PHRASE ON EARTH</span> and the specific hour the phrase will be used.
+        </p>
+        <p style="margin:20px">
+            Then listen to mornings from 6-10a with Leza and <span style="text-decoration: underline;">when she uses the phrase</span> <span style="color: #3366ff;font-weight:700;">be the 3rd caller</span> to win some great summer fun and be qualified to win the Ultimate Trip to Disneyland including park passes, hotel stay and transportation.
+        </p>
+        {#<p style="text-align: center;"><strong>This week you could win:</strong></p>#}
+
+        <p style="text-align: center;"><span style="font-size: 10pt; color: #999999;"><strong>Brought To You By:</strong></span></p>
+        <p style="text-align: center;">
+            <a href="http://northazortho.com/urgent%20" target="_blank"><img class="alignnone wp-image-224 size-full" src="{{asset('images/sponsors/no-az-ortho.jpg')}}" alt="Northern Arizona Orthopaedics" width="144" height="63" style="padding:5px 10px;"/></a>
+            <a href="http://www.myhomco.com/" target="_blank"><img class="alignnone wp-image-223 size-full" src="{{asset('images/sponsors/homco-lumber.jpg')}}" alt="HomCo Lumber" width="180" height="50"  style="padding:5px 10px;"/></a>
+            <a href="http://www.highlandsfloorcoverings.com/" target="_blank"><img class="alignnone wp-image-222 size-full" src="{{asset('images/sponsors/highlands-floor-coverings.jpg')}}" alt="highlands floor coverings" width="179" height="74" style="padding:5px 10px;" /></a>
+            <a href="http://flagstaffnissansubaru.com" target="_blank"><img class="alignnone wp-image-221 size-full" src="{{asset('images/sponsors/flagstaff-nissan-subaru.jpg')}}" alt="flagstaff nissan subaru" width="135" height="66" style="padding:5px 10px;" /></a>
+            <a href="http://www.bigotires.com/Location/AZ/Flagstaff/86004" target="_blank"><img class="alignnone wp-image-220 size-full" src="{{asset('images/sponsors/big-o-tires.jpg')}}" alt="big o tires" width="200" height="34" style="padding:5px 10px;" /></a>
         </p>
     </div>
 {% endblock %}
