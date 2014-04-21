@@ -499,3 +499,4 @@ div.dbl-row p:first-child + p{
     background-color:#cdd6e9;
     overflow:auto;
 }
+ul.job-info li{list-style-type:disc;margin-left:20px;}
