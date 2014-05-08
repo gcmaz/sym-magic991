@@ -100,7 +100,7 @@ class ContestController extends Controller
                 return $this->render('Magic991MainBundle:Contest:massageenvy.html.twig', array(
                     'form' => $form->createView(),
                     'contest' => $contest,
-                    'status' => 'live'
+                    'status' => 'dead'
                 ));
                 
             // 2013 NISSAN VERSA NOTE
