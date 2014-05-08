@@ -5,11 +5,11 @@
     <link type="text/css" rel="stylesheet" href="{{asset('scripts/nivo-slider/nivo-slider.css')}}"/>
 {% endblock %}
     
-{% block leftcol_priority_banner %}
+{# block leftcol_priority_banner %}
     <a href="http://www.gcmaz.com/contest/nom-a-mom">
         <img src="{{asset('images/300x250/nom-a-mom.jpg')}}" width="300" height="250" alt="Nominate a Super Mom to win prizes in the Nom-a-Mom contest" />
     </a>
-{% endblock %}
+{% endblock #}
 
 {% block leftcol_fb %}{% endblock %}
     
@@ -59,18 +59,11 @@
                 <img src="{{ asset('images/320x150/word.jpg') }}" width="320" height="150" alt="Play The Perks Word"/>
             </a>
         </div>#}
-        {#<a href="{{ path('Magic991_pet')}}" >
+        <a href="{{ path('Magic991_pet')}}" >
             <div class="box_320x150 box_right dropshadow pet-banner">
                 <img {% for entity in entities %} src="{% path entity.picture, 'small' %}" width="150" height="150" alt="{{ entity.name }}" border="0" align="right" {% endfor %}/>
             </div>
-        </a>#}
-        <div class="box_320x150 box_right dropshadow">
-            {#<div class="nivoSlider" id="slider2">#}
-                <a href="http://www.gcmaz.com/info/teachers-appreciation-night" target='_blank'>
-                    <img src="{{asset('images/320x150/teachers-appreciation-night.jpg')}}" width="320" height="150" alt="Teachers Appreciation Night Prescott" border="0"/>
-                </a>
-            {#</div>#}
-        </div>
+        </a>
         <br class="clear"/><br/>
     </div>
 {% endblock %}
